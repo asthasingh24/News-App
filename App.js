@@ -25,7 +25,7 @@ const App = () => {
         try {
             setLoading(true);
             const response = await fetch(
-`https://newsapi.org/v2/top-headlines?country=us&category=$%7BselectedCategory%7D&apiKey=bd3916e8bfe04202b97dc9ad162b8483%60`
+`https://newsapi.org/v2/top-headlines?country=us&category=${selectedCategory}&apiKey=9bdec2f445554a4e824679c8b3db6b83`
             );
             const result = await response.json();
             setNews(
@@ -104,7 +104,7 @@ const App = () => {
                     type="font-awesome"
                     color="green" size={30} />
                 <Text style={appStyles.header}>
-                    GeeksforGeeks News Reader
+                    News-Mania
                 </Text>
             </View>
             <View style={appStyles.categoryPickerContainer}>
